@@ -41,6 +41,12 @@ const Error = styled.span`
   font-weight: 600;
   color: tomato;
 `;
+const Switcher = styled.span`
+  margin-top: 20px;
+  a {
+    color: #1d9bf0;
+  }
+`;
 
 export default function CreateAccount() {
   const navigate = useNavigate();
@@ -125,6 +131,9 @@ export default function CreateAccount() {
         />
       </Form>
       {error !== "" ? <Error>{error}</Error> : null}
+      <Switcher>
+        Already have an account? <Link to="/login">Log in &rarr;</Link>
+      </Switcher>
     </Wrapper>
   );
 }
