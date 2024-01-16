@@ -169,8 +169,10 @@ export default function Profile() {
       <Name>
         {editDisplayname ? (
           <DisplaynameInput
+            type="text"
             onChange={onDisplaynameChange}
             placeholder={displayname}
+            autoFocus
           />
         ) : (
           user?.displayName ?? "Anonymous"
